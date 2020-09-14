@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <title>Saturno V</title>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet" />
+        <style>
+            body {
+                font-family: "Work Sans", sans-serif;
+                font-weight: 300;
+                background-color: rgba(240, 240, 240, 1);
+                color: rgba(170, 170, 170, 1);
+            }
+
+            body::-webkit-scrollbar {
+                width: 0.4rem;
+                scrollbar-color: rgba(200, 200, 200, 1) rgba(240, 240, 240, 1);
+            }
+
+            body::-webkit-scrollbar-track {
+                background: rgba(240, 240, 240, 1);
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: rgba(200, 200, 200, 1);
+            }
+            body::-webkit-scrollbar-thumb:hover {
+                background-color: rgba(190, 190, 190, 1);
+            }
+
+            a {
+                color: rgba(150, 150, 150, 1);
+            }
+
+            .faseuno{fill: #a0001f
+            }
+
+            .fasedos{fill: #f4002f
+            }
+
+            .fasetres{fill: #febca8
+            }
+
+            svg polygon {
+                fill: #ddd;
+                stroke: #444;
+                stroke-miterlimit: 10;
+            }
+
+            svg:hover {
+                cursor: grab;
+            }
+
+            svg:hover polygon {
+                fill: #fff;
+                transition: all 0.4s ease;
+            }
+
+            svg g#modulo-alunizaje {
+                /* por defecto, se esconde */
+                display: none;
+            }
+
+            svg:hover polygon#torre-salvamento {
+                transform: translate(0, -6vh);
+                transition: transform 0.1s ease;
+            }
+
+            svg:hover g#apolo {
+                transform: translate(0, -4vh);
+            }
+
+            svg:hover g#modulo-alunizaje {
+                /* con mouse encima del svg, se muestra */
+                display: inherit;
+            }
+
+            svg:hover polygon#garage-modulo-alunizaje {
+                /* con mouse encima del svg, se esconde */
+                display: none;
+            }
+
+            svg:hover polygon#propulsor-tercera-etapa {
+                transform: translate(0, 1vh);
+                transition: transform 0.2s ease;
+            }
+
+            svg:hover polygon#cono-empalme {
+                transform: translate(0, 6vh);
+            }
+
+            svg:hover polygon#segunda-etapa {
+                transform: translate(0, 7vh);
+            }
+
+            svg:hover polygon#anillo-empalme {
+                transform: translate(0, 11vh);
+            }
+
+            svg:hover polygon#primera-etapa {
+                transform: translate(0, 12vh);
+            }
+
+            figure{
+                margin:1rem 0 5rem 0;
+            }
+
+            figure img {
+                width: 100%;
+                height: auto;
+            }
+
+            figure figcaption{
+                padding:0.5rem 0;
+                text-align: center;
+                font-size: 90%;
+                letter-spacing: 0.05rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-11 pt-5">
+                        <p class="px-1">
+                            Maria Jose Coudeu <span class="float-right"><a href="https://github.com/profesorfaco/dno075-2020">Infografía Digital</a> <span class="d-none d-lg-inline">&bull; Lunes 14 de septiembre, 2020</span></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-11 text-center pt-5">
+                    <h1>Saturno V</h1>
+                    <h2>El cohete de las misiones Apolo</h2>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <svg x="0px" y="0px" viewBox="0 0 100 900" xml:space="preserve">
+                        <g id="saturno_v">
+
+                            <g id="apolo">
+
+                                <polygon id="modulo-mando" class= "fasetres" points="55,117 45,117 34,132 66,132"/>
+                                <polygon id="modulo-servicio" class= "fasetres" points="34,132 34,162 35,165 45,165 43,178 57,178 55,165 65,165 66,162 66,132"/>
+                            </g>
+                            <polygon id="torre-salvamento" class= "fasetres" points="54,97 52,94 52,52 50,50 48,52 48,94 46,97 45,117 55,117"/>
+                            <polygon id="propulsor-tercera-etapa" class= "fasetres" points="75,219 25,219 25,308 47,314 42,323 42,333 58,333 58,323 53,314 75,308"/>
+                            <polygon id="cono-empalme" class= "fasedos" points="75,308 25,308 12,345 88,345"/>
+                            <polygon id="segunda-etapa" class= "fasedos" points="11,470 20,475 27,475 21.8,480 21,490 38,490 37,480 32,475 47,475 42,480 41,490 59,490 58.4,480 53,475 68,475 63,480 62,490 79,490 78,480 73,475 80,475 89,470 88,345 12,345"/>
+                            <polygon id="anillo-empalme" class= "faseuno" points="11,470 10,530 90,530 89,470"/>
+                            <polygon id="primera-etapa" class= "faseuno" points="90,530 10,530 10,715 5,720 5,732 12,735 12,740 1,750 1,760 8,760 5,770 34,770 33,775 67,775 66,770 95,770 92,760 99,760 99,750 88,740 88,735 95,732 95,720 90,715"/>
+                            <polygon id="garage-modulo-alunizaje" class= "fasetres" points="25,219 34,162 66,162 75,219"/>
+                        </g>
+                        <g id="modulo-alunizaje">
+                            <polygon id="abierto-derecha" class= "fasetres" points="99,218 94,163 79,162 74,215"/>
+                            <polygon id="abierto-izquierda" class= "fasetres" points="1,218 26,215 21,162 6,163"/>
+                            <polygon id="modulo-lunar" points="68,210 63,198 60,197 59,191 57,190 57,186 55,182 45,182 43,186 43,190 41,191 40,197 37,198 32,210 29,210 29,212 36,212 36,210 34,210 38,200 39,206 46,208 45,210 48,210 48,214 46,214 46,216 53,216 53,214 51,214 51,210 54.1,210 53,208 61,206 62,200 66,210 64,210 64,212 71,212 71,210"/>
+                            <path id="astronauta" class="st1" d="M52.5,121.6v-0.3c0-0.5-0.4-0.9-0.9-0.9h-0.1c-0.1-0.7-0.7-1.3-1.5-1.3
+                            		c-0.8,0-1.4,0.6-1.5,1.3h-0.1c-0.5,0-0.9,0.4-0.9,0.9v0.3c-0.3,0.2-0.5,0.6-0.5,1v0.4v2.8c0,0.3,0.2,0.6,0.5,0.6v0.3
+                            		c0,0.5,0.4,0.9,0.9,0.9h0.1v1.8c0,0.4,0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6v-1.8h0.4v1.8c0,0.4,0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6v-1.8
+                            		h0.1c0.5,0,0.9-0.4,0.9-0.9v-0.3c0.3-0.1,0.5-0.3,0.5-0.6V123v-0.4C53.1,122.1,52.8,121.8,52.5,121.6z M52.3,121.2v0.2
+                            		c-0.2-0.1-0.3-0.1-0.5-0.1h-0.2h-0.2c0.1-0.2,0.2-0.5,0.2-0.7h0.1C52,120.5,52.3,120.9,52.3,121.2z M50.1,119.4
+                            		c0.6,0,1.1,0.4,1.1,0.9c0,0.5-0.5,0.9-1.1,0.9s-1.1-0.4-1.1-0.9C49,119.8,49.5,119.4,50.1,119.4z M47.9,121.2
+                            		c0-0.4,0.3-0.7,0.7-0.7h0.1c0,0.3,0.1,0.5,0.2,0.7h-0.2h-0.2c-0.2,0-0.4,0-0.5,0.1V121.2z M48.5,127.3c-0.4,0-0.7-0.3-0.7-0.7v-0.3
+                            		c0.3-0.1,0.5-0.3,0.5-0.6V123h0.2v2.8L48.5,127.3L48.5,127.3z M49.9,127.3v-1.6h0.4v1.6H49.9z M51.6,127.3L51.6,127.3l-0.1-1.6V123
+                            		h0.2v2.8c0,0.3,0.2,0.6,0.5,0.6v0.3C52.3,127,52,127.3,51.6,127.3z"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="col-11">
+                    <h4 class="text-center mb-3">Fases del cohete</h4>
+                    <p class="text-justify px-1">El cohete Saturno V se compone de tres Fases; la primera Fase lleva 5 motores con una duración de encendido de 2 minutos y 30 segundos, consumiendo 2.050 m3 de combustible; la segunda Fase lleva 5 motores con una duración de encendido de 6 minutos y 30 segundos, consumiendo 1.350 m3 de combustible; la tercera fase se compone de 1 motor y duración de encendido de 2 minutos, consumiendo 39 toneladas de combustible. La primera fase consume 13,5 m3 de combustible por segundo. El tiempo de entrada en órbita es 11 minutos y 40 segundos. La tercera fase se reenciende para salir de la órbita terrestre. De la órbita lunar se sale con el motor del Módulo de Servicio.</p>
+                    <figure>
+                        <img src="animacion.gif" class="shadow-sm">
+                        <figcaption>Lorem ipsum dolor sit amet</figcaption>
+                    </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
